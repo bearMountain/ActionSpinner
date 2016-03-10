@@ -42,8 +42,18 @@ class ActionSpinnerView: UIView {
         let radialGravity = UIFieldBehavior.fieldWithEvaluationBlock { (field, position, velocity, mass, charge, deltaTime) -> CGVector in
             let dx = viewCenter.x - position.x
             let dy = viewCenter.y - position.y
-            let factor: CGFloat = 5.0
-            return CGVector(dx:dx/factor, dy:dy/factor)
+            let distance = hypot(dx, dy)
+
+            let factor: CGFloat = 300.0
+            let distSqrd = pow(distance, 2)
+            let vector = CGVector(dx: dx/distSqrd*factor, dy: dy/distSqrd*factor)
+            
+            let minDist: CGFloat = 20.0
+            if distance < minDist {
+                return CGVector(dx: 0, dy: 0)
+            }
+            
+            return vector
         }
         radialGravity.addItem(self.raft)
         return radialGravity
@@ -70,14 +80,14 @@ class ActionSpinnerView: UIView {
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
         
         itemBehavior = UIDynamicItemBehavior(items: [raft])
-        itemBehavior.resistance = 8
+//        itemBehavior.resistance = 8
+        itemBehavior.resistance = 2
         itemBehavior.elasticity = 1.1
-        
         
         animator?.addBehavior(radialGravity)
         animator?.addBehavior(collisionBehavior)
         animator?.addBehavior(itemBehavior)
-        //        animator?.setValue(true, forKey: "debugEnabled")
+//        animator?.setValue(true, forKey: "debugEnabled")
     }
     
     func setupPanRecognizer() {
@@ -132,3 +142,10 @@ class ActionSpinnerView: UIView {
         }
     }
 }
+
+
+// Equal Gravity Setting
+//  let factor: CGFloat = 5.0
+//  return CGVector(dx:dx/factor, dy:dy/factor)
+//  itemBehavior.resistance = 8
+
