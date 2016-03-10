@@ -41,6 +41,7 @@
 		013BB91C1C910845005B255C /* DGActivityIndicatorTriplePulseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 013BB8F91C910845005B255C /* DGActivityIndicatorTriplePulseAnimation.m */; };
 		013BB91D1C910845005B255C /* DGActivityIndicatorTripleRingsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 013BB8FB1C910845005B255C /* DGActivityIndicatorTripleRingsAnimation.m */; };
 		013BB91E1C910845005B255C /* DGActivityIndicatorTwoDotsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 013BB8FD1C910845005B255C /* DGActivityIndicatorTwoDotsAnimation.m */; };
+		013BB9201C9116BD005B255C /* ActionSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013BB91F1C9116BD005B255C /* ActionSpinnerView.swift */; };
 		01AF77F71C6D0DA1006F1016 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AF77F61C6D0DA1006F1016 /* AppDelegate.swift */; };
 		01AF77F91C6D0DA1006F1016 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AF77F81C6D0DA1006F1016 /* ViewController.swift */; };
 		01AF77FE1C6D0DA1006F1016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01AF77FD1C6D0DA1006F1016 /* Assets.xcassets */; };
@@ -118,6 +119,7 @@
 		013BB8FB1C910845005B255C /* DGActivityIndicatorTripleRingsAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGActivityIndicatorTripleRingsAnimation.m; path = DGActivityIndicatorView/Animations/DGActivityIndicatorTripleRingsAnimation.m; sourceTree = "<group>"; };
 		013BB8FC1C910845005B255C /* DGActivityIndicatorTwoDotsAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DGActivityIndicatorTwoDotsAnimation.h; path = DGActivityIndicatorView/Animations/DGActivityIndicatorTwoDotsAnimation.h; sourceTree = "<group>"; };
 		013BB8FD1C910845005B255C /* DGActivityIndicatorTwoDotsAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DGActivityIndicatorTwoDotsAnimation.m; path = DGActivityIndicatorView/Animations/DGActivityIndicatorTwoDotsAnimation.m; sourceTree = "<group>"; };
+		013BB91F1C9116BD005B255C /* ActionSpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSpinnerView.swift; sourceTree = "<group>"; };
 		01AF77F31C6D0DA1006F1016 /* ActionSpinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActionSpinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01AF77F61C6D0DA1006F1016 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01AF77F81C6D0DA1006F1016 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -232,11 +234,11 @@
 		01AF77F51C6D0DA1006F1016 /* ActionSpinner */ = {
 			isa = PBXGroup;
 			children = (
-				013BB8B71C910824005B255C /* DG */,
+				013BB91F1C9116BD005B255C /* ActionSpinnerView.swift */,
 				01AF77F61C6D0DA1006F1016 /* AppDelegate.swift */,
 				01AF77F81C6D0DA1006F1016 /* ViewController.swift */,
-				01AF78081C6D1000006F1016 /* Supporting Files */,
 				013BB8B21C91076D005B255C /* ActionSpinner-Bridging-Header.h */,
+				01AF78081C6D1000006F1016 /* Supporting Files */,
 			);
 			path = ActionSpinner;
 			sourceTree = "<group>";
@@ -244,6 +246,7 @@
 		01AF78081C6D1000006F1016 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				013BB8B71C910824005B255C /* DG */,
 				01AF77FD1C6D0DA1006F1016 /* Assets.xcassets */,
 				01AF77FF1C6D0DA1006F1016 /* LaunchScreen.storyboard */,
 				01AF78021C6D0DA1006F1016 /* Info.plist */,
@@ -347,6 +350,7 @@
 				013BB9121C910845005B255C /* DGActivityIndicatorLineScaleAnimation.m in Sources */,
 				013BB9071C910845005B255C /* DGActivityIndicatorBallScaleAnimation.m in Sources */,
 				013BB9091C910845005B255C /* DGActivityIndicatorBallScaleRippleAnimation.m in Sources */,
+				013BB9201C9116BD005B255C /* ActionSpinnerView.swift in Sources */,
 				013BB8BB1C910832005B255C /* DGActivityIndicatorView.m in Sources */,
 				013BB9011C910845005B255C /* DGActivityIndicatorBallClipRotatePulseAnimation.m in Sources */,
 				013BB91C1C910845005B255C /* DGActivityIndicatorTriplePulseAnimation.m in Sources */,
